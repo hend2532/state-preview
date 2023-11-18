@@ -1,0 +1,100 @@
+body{
+   background-color:  hsl(233, 47%, 7%);
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+*{box-sizing: border-box;}
+.parent{
+   display: flex;
+   flex-wrap: wrap;
+   color: wheat;
+   width: 600px;
+   margin: 20px auto;
+}
+.parent1{
+   width: 300px;
+   background-color:hsl(244, 38%, 16%) ;
+   padding: 15px;
+   border-top-left-radius: 15px;
+   border-bottom-left-radius: 15px;
+}
+.parent1 h1{
+   color: hsl(0, 0%, 100%);
+   font-size: 25px;
+}
+.parent1 h1 span{
+   color:hsl(277, 64%, 61%);
+}
+.insight{
+   color:hsla(0, 0%, 100%, 0.75);
+   font-size: 13px;
+   line-height: 2;
+}
+.child2{
+   display: flex;
+   justify-content:space-evenly;
+   flex-wrap: wrap;
+}
+.child2 h2{
+   color: white;
+   font-size: 18px;
+}
+.child2 p{
+   color: hsla(0, 0%, 100%, 0.6);
+   font-size: 13px;
+   margin-top: -10px;
+   margin-left: -5px;
+   text-align: center;
+}
+.parent2{
+   /* background-image: url(images/image-header-desktop.jpg); */
+   width:300px;
+   position: relative;
+}
+.parent2::before{
+   content: "";
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background-color: hsla(277, 98%, 55%, 0.469);
+   border-top-right-radius: 15px;
+   border-bottom-right-radius: 15px;
+}
+img{
+   width: 300px;
+   height: 100%;
+   border-top-right-radius: 15px;
+   border-bottom-right-radius: 15px;
+}
+@media(max-width:450px){
+   .parent{width: 100%;}
+   .parent1{
+      order: 1;
+      width: 100%;
+      margin: 0 20px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 15px;
+      text-align: center;
+   }
+   .parent2{
+      width: 100%;
+      /* margin: 0 auto;    */
+      margin: 0 20px;
+   }
+   img{
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 0px;
+   }
+   .child2{
+      display: contents;
+   }
+   .parent2::before{
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 0px;
+   }
+   }
+   .attribution{
+      color: white;
+   }
